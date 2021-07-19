@@ -1,39 +1,30 @@
 /* Codded by Phaticusthiccy
-
 Eva, The Phaticusthiccy's Multifunctional Artificial Intelligence
-
 Eva AI has more than 50 Gigabyte dataset which including neural calculator,
 wikipedia data, sentiment analysis, Instagram workflow with neural cells.
-
 Thanks for Brainshop.ai for a rest connection with non-ethernet interaction
 Eva database. 
-
 Eva is a multimedia-powered artificial intelligence with its own virtual brain.
 Brainshop.ai allow access to load all external conversation for train Neural cells,
 from every user's historical conversations.
-
 Think twice about your choices about Eva. 
 May react differently in directed situations. This is completely natural and depends on users.
 All message history with Eva is not exported to any 3rd applications.
 Since Eva works entirely with deep learning, all responsibility belongs to the user.
-
 Arvix Articles About Eva's System:
 >> https://arxiv.org/abs/2106.09461
 >> https://arxiv.org/abs/2102.00287
 >>https://arxiv.org/abs/2106.06157
-
 Wikipedia Articles About Eva'a System:
 >> https://en.m.wikipedia.org/wiki/Optical_character_recognition
 >> https://en.m.wikipedia.org/wiki/Text_mining
 >> https://en.m.wikipedia.org/wiki/Natural_language_processing
-
 */
 // ===================================================
 /*
 Eva has never been connected to the internet previously.
 The Brainshop.ai supports to javascript datasets, so thats way we cloned some datas from Eva to 
 Brainshop.ai. 
-
 Therefore, 100% efficiency cannot be obtained from Eva Artificial Intelligence.
 The voice recognition doesn't work with eva infrastructure.
 We are using wit.ai's voice recognition for voicy conversation.
@@ -216,7 +207,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
         }
 
 }));
-Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (message, match) => {
+Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc,dontAddCommandList: true, fromMe: wk }, (async (message, match) => {
     if (!message.reply_message) return await message.client.sendMessage(message.jid,reply_eva, MessageType.text, { quoted: message.data }) 
     try {
         const file = await message.client.downloadAndSaveMediaMessage({
@@ -334,7 +325,7 @@ if (conf.LANG == 'ID') {
     succ_off = 'Eva Set ke Semi-Fungsional! Mohon tunggu sebentar! ☑️'
 }
 
-Asena.addCommand({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true, usage: '.fulleva on / off' }, (async (message, match) => {
+Asena.addCommand({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.fulleva on / off' }, (async (message, match) => {
     var eva_status = `${conf.FULLEVA}`
     if (match[1] == 'on') {
         if (eva_status == 'true') {
