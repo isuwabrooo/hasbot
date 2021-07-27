@@ -1,15 +1,14 @@
-{
-    "name": "Jinnh",
-    "description": "Coded By Mikhaiel",
+"name": "Jimbrootan 🤸",
+    "description": "Jimbrootan - Whatsapp Bot",
     "logo": "https://avatars.githubusercontent.com/u/72667834?v=4",
     "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
-    "repository": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated",
+    "repository": "https://github.com/Mikhaiel/Jimbrootan",
     "website":   "https://t.me/phaticusthiccy",
     "success_url": "https://t.me/AsenaSupport",
     "stack": "container",
     "env": {
         "ASENA_SESSION": {
-            "description": "Qr.Js , Type here yours Asena Session.",
+            "description": "Qr.Js - Type here yours Asena Session.",
             "required": true
         },
         "SUDO": {
@@ -26,8 +25,13 @@
             "required": false,
             "value": "true"
         },
+        "AUTO_STICKER": {
+            "description": "If you likes bgm you can write 'true'. Otherwise false",
+            "required": false,
+            "value": "true"
+        },
         "ANTİ_LİNK": {
-            "description": "Link Engelleme Sistemi. Link Blocking System.",
+            "description" : "Link Blocking System.",
             "required": true,
             "value": "false"
         },
@@ -91,7 +95,7 @@
             "value": "default"
         },
         "WORK_TYPE": {
-            "description": "Jinn Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
+            "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
             "required": true,
             "value": "public"
         },
@@ -100,7 +104,7 @@
             "required": true
         },
         "DEBUG": {
-            "description": "Geliştiricilere özeldir.",
+            "description": "It is for developers.",
             "required": true,
             "value": "false"
         },
