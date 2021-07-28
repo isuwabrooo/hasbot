@@ -4,8 +4,6 @@
     "logo": "https://avatars.githubusercontent.com/u/72667834?v=4",
     "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
     "repository": "https://github.com/Mikhaiel/Jimbrootan",
-    "website":   "https://t.me/phaticusthiccy",
-    "success_url": "https://t.me/AsenaSupport",
     "stack": "container",
     "env": {
         "ASENA_SESSION": {
@@ -44,7 +42,7 @@
         "HANDLERS": {
             "description": "For commands.",
             "required": true,
-            "value": "^[.!;]"
+            "value": "^[.]"
         },
         "FULL_EVA": {
             "description": "Turn your account into a chatbot!",
