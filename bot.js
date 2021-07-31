@@ -65,9 +65,8 @@ async function whatsAsena () {
           info: 'StringSession'
         }
     });
-   
-    conn.sendMessage(conn.user.jid, '*===== [ 📢 Announcement 📢 ] =====*\n\n👋 HEY BRO Sukhamalle , 😂\n\n💖 Thank You For Using JIMBROOTAN 💖', MessageType.text) 
-     
+    
+    
     const conn = new WAConnection();
     conn.version = [2,2121,7];
     const Session = new StringSession();
