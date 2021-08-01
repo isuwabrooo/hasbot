@@ -3,7 +3,8 @@
     "description": "Jimbrootan - Whatsapp Bot",
     "logo": "https://avatars.githubusercontent.com/u/72667834?v=4",
     "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
-    "repository": "https://github.com/Mikhaiel/Jimbrootan",
+    "repository": "https://github.com/Mikhaiel/Jinnh",
+    "Join Our Whatsapp Support Group": "https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd",
     "stack": "container",
     "env": {
         "ASENA_SESSION": {
@@ -34,7 +35,12 @@
             "required": true,
             "value": "false"
         },
-        "AUTO_BİO": {
+        "ALL_LINK_BAN": {
+            "description": "Link Blocking System.- this one blocks all link",
+            "required": true,
+            "value": "false"
+        },
+            "AUTO_BİO": {
             "description": "Set true for auto date, time in biography.",
             "required": true,
             "value": "false"
@@ -42,7 +48,7 @@
         "HANDLERS": {
             "description": "For commands.",
             "required": true,
-            "value": "^[.]"
+            "value": "^[.!;]"
         },
         "FULL_EVA": {
             "description": "Turn your account into a chatbot!",
