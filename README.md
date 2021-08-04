@@ -15,9 +15,7 @@
        © Reserved 
     <br>
 </p>
-
 ----
-
   <p align="center">
   <a href="httsp://github.com/Mikhaiel/Jinnh">
     <img src="https://img.shields.io/github/repo-size/Mikhaiel/Jinnh?color=green&label=Repo%20total%20size&style=plastic">
@@ -28,7 +26,6 @@
 <a href="https://github.com/Mikhaiel/Jinnh/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Mikhaiel/Jinnh?label=Watchers&color=blue&style=flat-square"></a>
 <a href="#"><img title="MAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-blue.svg"</a>
 </p>
-
 ## 📢 Guide
 Click WA logo for Support 👇
     <br>
@@ -36,25 +33,20 @@ Click WA logo for Support 👇
   [![join](https://github.com/Alien-alfa/PublicBot/blob/main/wlogo.svg.png)](https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd)
   <div align="center">
 
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Mikhaiel&repo=Jimbrootan&theme=nightowl)](https://github.com/Mikhaiel/Jinnh)
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Mikhaiel&repo=Jinnh&theme=nightowl)](https://github.com/Mikhaiel/Jinnh)
   </div>
-
 ## Setup
 <div align="center">
-
   ### Simple Method
-
 [![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@phaticusthiccy/WhatsAsena-QR)
-
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Mikhaiel/Jinnh)
      </div>
 <br>
 <br >
-## If Repl.it not working Try Termux for Qr scanning.Just Copy the Link Below in Termux
+If Repl.it not working Try Termux for Qr scanning.Just Copy the Link Below in Termux
 ```
 bash <(curl -L https://t.ly/tHxh)
 ```
-
 ### The Hard Method
 ```js
 GET QR
@@ -68,7 +60,6 @@ $ npm install @adiwajshing/baileys
 $ npm install chalk
 $ node qr.js
 ```
-
 ```js
 SETUP
 $ git clone https://github.com/Mikhaiel/Jinnh
@@ -79,8 +70,6 @@ $ node qr.js
    // scan the qr using whatsapp web on your phone
 $ node bot.js
 ```
-
-
 ### ⚠️ Warning!
 ```
 Due to Userbot; Your WhatsApp account may be banned.
@@ -88,10 +77,7 @@ This is an open source project, you are responsible for everything you do.
 Absolutely, Asena executives do not accept responsibility.
 By establishing the Asena, you are deemed to have accepted these responsibilities.
 ```
-
-
 ## License
 This project is protected by `GNU General Public Licence v3.0` license.
-
 ### Disclaimer
 `WhatsApp` name, its variations and the logo are registered trademarks of Facebook. We have nothing to do with the registered trademark
