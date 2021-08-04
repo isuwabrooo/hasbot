@@ -19,13 +19,13 @@
 ----
 
   <p align="center">
-  <a href="httsp://github.com/Mikhaiel/Jimbrootan">
-    <img src="https://img.shields.io/github/repo-size/Mikhaiel/Jimbrootan?color=green&label=Repo%20total%20size&style=plastic">
+  <a href="httsp://github.com/Mikhaiel/Jinnh">
+    <img src="https://img.shields.io/github/repo-size/Mikhaiel/Jinnh?color=green&label=Repo%20total%20size&style=plastic">
 <p align="center">
 <a href="https://github.com/Mikhaiel/followers"><img title="Followers" src="https://img.shields.io/github/followers/Mikhaiel?color=blue&style=flat-square"></a>
-<a href="https://github.com/Mikhaiel/Jimbrootan/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Mikhaiel/Jinnh?color=blue&style=flat-square"></a>
-<a href="https://github.com/Mikhaiel/Jimbrootan/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Mikhaiel/Jinnh?color=blue&style=flat-square"></a>
-<a href="https://github.com/Mikhaiel/Jimbrootan/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Mikhaiel/Jinnh?label=Watchers&color=blue&style=flat-square"></a>
+<a href="https://github.com/Mikhaiel/Jinnh/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Mikhaiel/Jinnh?color=blue&style=flat-square"></a>
+<a href="https://github.com/Mikhaiel/Jinnh/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Mikhaiel/Jinnh?color=blue&style=flat-square"></a>
+<a href="https://github.com/Mikhaiel/Jinnh/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Mikhaiel/Jinnh?label=Watchers&color=blue&style=flat-square"></a>
 <a href="#"><img title="MAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-blue.svg"</a>
 </p>
 
@@ -61,8 +61,8 @@ GET QR
 $ apt update
 $ apt install nodejs --fix-missing
 $ pkg install git
-$ git clone https://github.com/Mikhaiel/Jimbrootan
-$ cd Jimbrootan
+$ git clone https://github.com/Mikhaiel/Jinnh
+$ cd Jinnh
 $ chmod +x *
 $ npm install @adiwajshing/baileys
 $ npm install chalk
