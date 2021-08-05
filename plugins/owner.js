@@ -11,7 +11,7 @@ Asena.addCommand({pattern: 'git', fromMe: false, desc: Lang.WP}, (async (message
     
     
    
-  r_text[0] = "https://c4.wallpaperflare.com/wallpaper/195/797/214/aladdin-aladdin-gin-hd-wallpaper-preview.jpg";
+  r_text[0] = "https://i.imgur.com/5XTwx0i.jpeg";
     
     
     var i = Math.floor(1*Math.random())
