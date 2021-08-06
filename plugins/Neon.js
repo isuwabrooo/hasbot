@@ -1,4 +1,4 @@
-/* # Exclusively from Raashii
+/* Coded By Mikhaiel
 */
 
 const Asena = require('../events');
