@@ -29,12 +29,12 @@
         },
         "admin": {
             "BAN_DESC": "Ban someone in the group. Reply to message or tag a person to use command.",
-            "IM_NOT_ADMIN": "*I am not admin in this group!*",
-            "BANNED": "kicked out of the group!",
-            "GIVE_ME_USER": "*Give me a user!*",
+            "IM_NOT_ADMIN": "```da manduse njan admin alla !```",
+            "BANNED": "```Mwonu Vanna vazhi vittoo Ok Bie!```",
+            "GIVE_ME_USER": "```arelum mention chey😈!```",
             "ADD_DESC": "Adds someone to the group.",
             "ADDED": "added to the group!",
-            "ALREADY_PROMOTED": "```How can I make someone admin who is already admin?```",
+            "ALREADY_PROMOTED": "```Avan admin anu Mowne🙃```",
             "PROMOTED": "```, admin role was given!```",
             "PROMOTE_DESC": "Makes any person an admin.",
             "DEMOTE_DESC": "Takes the authority of any admin.",
@@ -148,7 +148,7 @@
         },
         "profile": {
             "KICKME_DESC": "It kicks you from the group you are using it in.",
-            "KICKME": "```Bye bye! I am going 🤠```",
+            "KICKME": "```Bye bye! I am going```",
             "PP_DESC": "Makes the profile photo what photo you reply.",
             "NEED_PHOTO": "*Give me a photo!*",
             "PPING": "```Setting profile photo...```",
@@ -203,7 +203,7 @@
         "sticker": {
             "STICKER_DESC": "It converts your replied photo or video to sticker.",
             "NEED_REPLY": "*Reply to a photo or video!*",
-            "DOWNLOADING": "```Wait Chey 🧞‍♂️```"
+            "DOWNLOADING": "```Wait Chey Jeem Boom Bhaa...🧞‍♂️```"
         },
         "system_stats": {
             "ALIVE_DESC": "Does bot work?",
@@ -224,14 +224,14 @@
         },
         "updater": {
             "UPDATER_DESC": "Checks the update.",
-            "UPDATE": "*Jimbrootan 🧞‍♂️ completely up-to-date!*",
-            "NEW_UPDATE": "*New update available for Jimbrootan 🧞‍♂️!*\n\nChanges:\n```",
+            "UPDATE": "```Jimbrootan 🧞‍♂️ completely up-to-date!```",
+            "NEW_UPDATE": "```New update available for Jimbrootan 🧞‍♂️!```\n\nChanges:\n```",
             "UPDATE_NOW_DESC": "It makes updates.",
-            "UPDATING": "Updating...🧞‍♂️",
+            "UPDATING": "```Updating...🧞‍```",
             "INVALID_HEROKU": "*❌ Your Heroku app name or api key wrong!*",
             "UPDATED": "*✅  Updated!*",
             "UPDATED_LOCAL": "*✅ Updated!*",
-            "AFTER_UPDATE": "*Jimbrootan 🧞‍♂️ Restarting !*",
+            "AFTER_UPDATE": "```Jimbrootan 🧞‍♂️ Restarting !```",
             "IN_AF": "*Please check* ```HEROKU_APP_NAME``` *and* ```app name``` *They must be same.*\n*If these two values ​​are the same, please restore* ```HEROKU_API_KEY```\n\n_To access these settings, use Heroku >> App >> Settings >> Reavel Config Vars_\n_To renew your API key, follow these steps, Heroku >> Account >> API Key then replace old api key in config vars._"
         },
         "whois": {
