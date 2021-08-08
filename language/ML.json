@@ -2,7 +2,7 @@
     "__ASENAJSON__": true,
     "LANGUAGE": "Manglish",
     "LANGCODE": "ml",
-    "AUTHOR": "Afnan-plk",
+    "AUTHOR": "Afnan-plk - RE-MODIFIED BY MIKHAIEL",
     "STRINGS": {
         "_asena": {
             "COMMAND": "Command",
@@ -72,10 +72,10 @@
             "MUST_TEXT": "```eathellum oru messagin reply cheyyu```"
         },
         "heroku": {
-            "RESTART_DESC": "\nRestart pinkymwol\n",
+            "RESTART_DESC": "\nRestart Jimbrootan\n",
             "RESTART_MSG": "```punararambikkunu...```",
-            "SHUTDOWN_DESC": "\nShutdown pinkymwol\n",
-            "SHUTDOWN_MSG": "```adach poottunnu ⛔```",
+            "SHUTDOWN_DESC": "\nShutdown Jimbrootan\n",
+            "SHUTDOWN_MSG": "```Shutting down 🙅‍♀️```",
             "DYNO_DESC": "heroku dyno kanaan ",
             "DYNO_TOTAL": "```motham Quota```",
             "DYNO_USED": "```Quota upayogichath```",
@@ -216,14 +216,14 @@
         },
         "updater": {
             "UPDATER_DESC": "update indo enn ariyaan.",
-            "UPDATE": "*ningalude bot up-to-date aan!*",
-            "NEW_UPDATE": "*JulieMwolk Update und* \n\n update cheyummathin munb support groupil chodhikkuka , allenkkil error veran chance und\n\nChanges:\n```",
+            "UPDATE": "```ningalude bot up-to-date aan!```",
+            "NEW_UPDATE": "*Jimbrootan 🧞‍♂️ Update und* \n\n update cheyummathin munb support groupil chodhikkuka , allenkkil error veran chance und\n\nChanges:\n```",
             "UPDATE_NOW_DESC": "botine update cheyaan.",
-            "UPDATING": "```Updating..🐥```",
-            "INVALID_HEROKU": "*❌ ningal thanna Heroku information thett aan !*",
-            "UPDATED": "*Updated 🤠✅*",
-            "UPDATED_LOCAL": "*✅ vijayagaramayi Update cheythu!*",
-            "AFTER_UPDATE": "*👰 julieMwol Restarting ?*"
+            "UPDATING": "```Updating...🧞‍♂️```",
+            "INVALID_HEROKU": "```❌ ningal thanna Heroku information thett aan !```",
+            "UPDATED": "```Updated...🧞‍♂️```",
+            "UPDATED_LOCAL": "```✅ vijayagaramayi Update cheythu!```",
+            "AFTER_UPDATE": "```Jimbrootan 🧞‍♂️ Restarting !```"
         },
         "weather": {
             "WEATHER_DESC": "ningal therrunna sthalathe kaalavastha kaanikkum.",
@@ -516,7 +516,7 @@
             "ARAT": "Searched Song:"
         },
         "github": {
-            "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: .github phaticusthiccy",
+            "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: .github Mikhaiel",
             "REPLY": "```You Need To Type Any Username!```",
             "NOT": "```User not found!```",
             "FOLLOWERS": "Followers:",
