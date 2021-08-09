@@ -30,6 +30,10 @@
             "required": false,
             "value": "true"
         },
+        "TAG_REPLY": {
+            "description": "Enter jid of your number so that you get a audio reply when metioned example - 91xxxxxxxxxx@s.whatsapp.net - for india",
+            "required": false          
+        },
         "ANTİ_LİNK": {
             "description" : "Link Blocking System.",
             "required": true,
