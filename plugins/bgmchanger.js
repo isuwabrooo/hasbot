@@ -17,8 +17,8 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
  
   if (config.LANG == 'EN') {
     
-    BGM_ONE = 'BGM TYPE CHANGED TO 1st MODE'
-    BGM_TWO = 'BGM TYPE CHANGED TO 2nd MODE'
+    BGM_ONE = 'BGM TYPE CHANGED TO MODE 1'
+    BGM_TWO = 'BGM TYPE CHANGED TO MODE 2'
     }
 
     if (config.LANG == 'ML') {
@@ -27,7 +27,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
       BGM_TWO = 'BGM തരം രണ്ടാം മോഡിലേക്ക് മാറ്റി'
     }
 
- Asena.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: plk_desc, usage: '.bgm one / two' }, (async (message, match) => {
+ Asena.addCommand({pattern: 'bgm ?(.*)', fromMe: true, usage: '.bgm one / two' }, (async (message, match) => {
         if (match[1] == 'two') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
