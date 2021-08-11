@@ -17,14 +17,14 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
  
   if (config.LANG == 'EN') {
     
-    BGM_ONE = 'BGM TYPE CHANGED TO MODE 1'
-    BGM_TWO = 'BGM TYPE CHANGED TO MODE 2'
+    BGM_ONE = 'BGM MODE 1 🏋️'
+    BGM_TWO = 'BGM MODE 2 🏋️'
     }
 
     if (config.LANG == 'ML') {
       
-      BGM_ONE = 'BGM തരം ഒന്നാം മോഡിലേക്ക് മാറ്റി'
-      BGM_TWO = 'BGM തരം രണ്ടാം മോഡിലേക്ക് മാറ്റി'
+      BGM_ONE = 'BGM ഒന്നാം മോഡിലേക്ക് മാറ്റി'
+      BGM_TWO = 'BGM രണ്ടാം മോഡിലേക്ക് മാറ്റി'
     }
 
  Asena.addCommand({pattern: 'bgm ?(.*)', fromMe: true, usage: '.bgm one / two' }, (async (message, match) => {
