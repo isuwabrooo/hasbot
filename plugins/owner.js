@@ -23,11 +23,11 @@ Asena.addCommand({pattern: 'git', fromMe: false, desc: Lang.WP}, (async (message
 
 *Owner number wa.me/919544846609*
 
-*githublink       https://github.com/Mikhaiel/Jinnh*
+*githublink       https://github.com/Nandhuz-Achu/Nandhutty*
 
-*audio commads    https://github.com/Mikhaiel/Jinnh/tree/master/uploads*
+*audio commads    https://github.com/Nandhuz-Achu/Nandhutty/tree/master/uploads*
 
-*sticker commads  https://github.com/Mikhaiel/Jinnh/tree/master/stickers*
+*sticker commads  https://github.com/Nandhuz-Achu/Nandhutty/tree/master/stickers*
 `}) 
 
 }));
