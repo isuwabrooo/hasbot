@@ -1,97 +1,269 @@
-<div align="center">
-  <img border-radius: 15px src="Image.jpg" width="200" height="200"/>
+/* Copyright (C) 2020 MIKHAIEL.
 
-  <p align="center">
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
 
-<a href="#"><img title="Jimbrootan🧞‍♂️" src="https://img.shields.io/badge/Jimbrootan%F0%9F%A7%9E%E2%80%8D%E2%99%82%EF%B8%8F-blueviolet?&style=for-the-badge"></a>
-</p>
-  <p align="center">
-<a href="https://github.com/Mikhaiel"><img title="Author" src="https://img.shields.io/badge/Author-Mikhaiel-Offical/Jimbrootan?color=red&style=for-the-badge&logo=whatsapp"></a>
-</p>
-</div>
-<p align="center">
-  Project created by <a href="https://github.com/Mikhaiel">Mikhaiel</a> to make it public
-    <br>
-       © Reserved 
-    <br>
-</p>
+WhatsAsena - Nandhutty
+*/
 
-----
+const fs = require("fs");
+const path = require("path");
+const events = require("./events");
+const chalk = require('chalk');
+const config = require('./config');
+const {WAConnection, MessageType, Presence} = require('@adiwajshing/baileys');
+const {Message, StringSession, Image, Video} = require('./whatsasena/');
+const { DataTypes } = require('sequelize');
+const { getMessage } = require("./plugins/sql/greetings");
+const axios = require('axios');
+const got = require('got');
 
-  <p align="center">
-  <a href="httsp://github.com/Mikhaiel/Jinnh">
-    <img src="https://img.shields.io/github/repo-size/Mikhaiel/Jinnh?color=green&label=Repo%20total%20size&style=plastic">
-<p align="center">
-<a href="https://github.com/Mikhaiel/followers"><img title="Followers" src="https://img.shields.io/github/followers/Mikhaiel?color=blue&style=flat-square"></a>
-<a href="https://github.com/Mikhaiel/Jinnh/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Mikhaiel/Jinnh?color=blue&style=flat-square"></a>
-<a href="https://github.com/Mikhaiel/Jinnh/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Mikhaiel/Jinnh?color=blue&style=flat-square"></a>
-<a href="https://github.com/Mikhaiel/Jinnh/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Mikhaiel/Jinnh?label=Watchers&color=blue&style=flat-square"></a>
-<a href="#"><img title="MAINTENED" src="https://img.shields.io/badge/UNMAINTENED-YES-blue.svg"</a>
-</p>
+// Sql
+const WhatsAsenaDB = config.DATABASE.define('WhatsAsena', {
+    info: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    value: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    }
+});
 
-## 📢 Guide
-Click WA logo for Support 👇
-    <br>
-<br>
-  [![join](https://github.com/Alien-alfa/PublicBot/blob/main/wlogo.svg.png)](https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd)
-  <div align="center">
+fs.readdirSync('./plugins/sql/').forEach(plugin => {
+    if(path.extname(plugin).toLowerCase() == '.js') {
+        require('./plugins/sql/' + plugin);
+    }
+});
 
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Mikhaiel&repo=Jimbrootan&theme=nightowl)](https://github.com/Mikhaiel/Jinnh)
-  </div>
+const plugindb = require('./plugins/sql/plugin');
 
-## Setup
-<div align="center">
+// Yalnızca bir kolaylık. https://stackoverflow.com/questions/4974238/javascript-equivalent-of-pythons-format-function //
+String.prototype.format = function () {
+    var i = 0, args = arguments;
+    return this.replace(/{}/g, function () {
+      return typeof args[i] != 'undefined' ? args[i++] : '';
+   });
+};
+if (!Date.now) {
+    Date.now = function() { return new Date().getTime(); }
+}
 
-  ### Simple Method
+Array.prototype.remove = function() {
+    var what, a = arguments, L = a.length, ax;
+    while (L && this.length) {
+        what = a[--L];
+        while ((ax = this.indexOf(what)) !== -1) {
+            this.splice(ax, 1);
+        }
+    }
+    return this;
+};
 
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@phaticusthiccy/WhatsAsena-QR)
+async function whatsAsena () {
+    await config.DATABASE.sync();
+    var StrSes_Db = await WhatsAsenaDB.findAll({
+        where: {
+          info: 'StringSession'
+        }
+    });
+    
+    
+    const conn = new WAConnection();
+    conn.version = [2,2121,7];
+    const Session = new StringSession();
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Mikhaiel/Jinnh)
-     </div>
-<br>
-<br >
-## If Repl.it not working Try Termux for Qr scanning.Just Copy the Link Below in Termux
-```
-bash <(curl -L https://t.ly/tHxh)
-```
+    conn.logger.level = config.DEBUG ? 'debug' : 'warn';
+    var nodb;
 
-### The Hard Method
-```js
-GET QR
-$ apt update
-$ apt install nodejs --fix-missing
-$ pkg install git
-$ git clone https://github.com/Mikhaiel/Jinnh
-$ cd Jinnh
-$ chmod +x *
-$ npm install @adiwajshing/baileys
-$ npm install chalk
-$ node qr.js
-```
+    if (StrSes_Db.length < 1) {
+        nodb = true;
+        conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
+    } else {
+        conn.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
+    }
 
-```js
-SETUP
-$ git clone https://github.com/Mikhaiel/Jinnh
-$ cd Jinnh
-$ chmod +x *
-$ npm i
-$ node qr.js
-   // scan the qr using whatsapp web on your phone
-$ node bot.js
-```
+    conn.on ('credentials-updated', async () => {
+        console.log(
+            chalk.blueBright.italic('✅ Login information updated!')
+        );
 
+        const authInfo = conn.base64EncodedAuthInfo();
+        if (StrSes_Db.length < 1) {
+            await WhatsAsenaDB.create({ info: "StringSession", value: Session.createStringSession(authInfo) });
+        } else {
+            await StrSes_Db[0].update({ value: Session.createStringSession(authInfo) });
+        }
+    })    
 
-### ⚠️ Warning!
-```
-Due to Userbot; Your WhatsApp account may be banned.
-This is an open source project, you are responsible for everything you do.
-Absolutely, Asena executives do not accept responsibility.
-By establishing the Asena, you are deemed to have accepted these responsibilities.
-```
+    conn.on('connecting', async () => {
+        console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
+${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 
+${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
+    });
+    
 
-## License
-This project is protected by `GNU General Public Licence v3.0` license.
+    conn.on('open', async () => {
+        console.log(
+            chalk.green.bold('✅ Login successful!')
+        );
 
-### Disclaimer
-`WhatsApp` name, its variations and the logo are registered trademarks of Facebook. We have nothing to do with the registered trademark
+        console.log(
+            chalk.blueBright.italic('🤸 Installing external plugins...')
+        );
+
+        var plugins = await plugindb.PluginDB.findAll();
+        plugins.map(async (plugin) => {
+            if (!fs.existsSync('./plugins/' + plugin.dataValues.name + '.js')) {
+                console.log(plugin.dataValues.name);
+                var response = await got(plugin.dataValues.url);
+                if (response.statusCode == 200) {
+                    fs.writeFileSync('./plugins/' + plugin.dataValues.name + '.js', response.body);
+                    require('./plugins/' + plugin.dataValues.name + '.js');
+                }     
+            }
+        });
+
+        console.log(
+            chalk.blueBright.italic('🤸  Installing plugins...')
+        );
+
+        fs.readdirSync('./plugins').forEach(plugin => {
+            if(path.extname(plugin).toLowerCase() == '.js') {
+                require('./plugins/' + plugin);
+            }
+        });
+
+        console.log(
+            chalk.green.bold('Nandhutty working! 🧞‍')
+        );
+    });
+    
+    conn.on('chat-update', async m => {
+        if (!m.hasNewMessage) return;
+        if (!m.messages && !m.count) return;
+        let msg = m.messages.all()[0];
+        if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
+
+        if (config.NO_ONLINE) {
+            await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
+        }
+
+        if (msg.messageStubType === 32 || msg.messageStubType === 28) {
+            // Görüşürüz Mesajı
+            var gb = await getMessage(msg.key.remoteJid, 'goodbye');
+            if (gb !== false) {
+                let pp
+                try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
+                await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message }); });
+            }
+            return;
+        } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
+            // Hoşgeldin Mesajı
+            var gb = await getMessage(msg.key.remoteJid);
+            if (gb !== false) {
+               let pp
+                try { pp = await conn.getProfilePicture(msg.messageStubParameters[0]); } catch { pp = await conn.getProfilePicture(); }
+                await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => {
+                await conn.sendMessage(msg.key.remoteJid, res.data, MessageType.image, {caption:  gb.message }); });
+            }
+            return;
+        }
+
+        events.commands.map(
+            async (command) =>  {
+                if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
+                    var text_msg = msg.message.imageMessage.caption;
+                } else if (msg.message && msg.message.videoMessage && msg.message.videoMessage.caption) {
+                    var text_msg = msg.message.videoMessage.caption;
+                } else if (msg.message) {
+                    var text_msg = msg.message.extendedTextMessage === null ? msg.message.conversation : msg.message.extendedTextMessage.text;
+                } else {
+                    var text_msg = undefined;
+                }
+
+                if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo')
+                    && msg.message && msg.message.imageMessage !== null && 
+                    (command.pattern === undefined || (command.pattern !== undefined && 
+                        command.pattern.test(text_msg)))) || 
+                    (command.pattern !== undefined && command.pattern.test(text_msg)) || 
+                    (command.on !== undefined && command.on === 'text' && text_msg) ||
+                    // Video
+                    (command.on !== undefined && (command.on === 'video')
+                    && msg.message && msg.message.videoMessage !== null && 
+                    (command.pattern === undefined || (command.pattern !== undefined && 
+                        command.pattern.test(text_msg))))) {
+
+                    let sendMsg = false;
+                    var chat = conn.chats.get(msg.key.remoteJid)
+                        
+                    if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
+                        (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)
+                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
+                        if (command.onlyPinned && chat.pin === undefined) return;
+                        if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
+                        else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
+                    }
+  
+                    if (sendMsg) {
+                        if (config.SEND_READ && command.on === undefined) {
+                            await conn.chatRead(msg.key.remoteJid);
+                        }
+                       
+                        var match = text_msg.match(command.pattern);
+                        
+                        if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
+                        && msg.message.imageMessage !== null) {
+                            whats = new Image(conn, msg);
+                        } else if (command.on !== undefined && (command.on === 'video' )
+                        && msg.message.videoMessage !== null) {
+                            whats = new Video(conn, msg);
+                        } else {
+                            whats = new Message(conn, msg);
+                        }
+/*
+                        if (command.deleteCommand && msg.key.fromMe) {
+                            await whats.delete(); 
+                        }
+*/
+                        try {
+                            await command.function(whats, match);
+                        } catch (error) {
+                            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+                                await conn.sendMessage(conn.user.jid, '-- HATA RAPORU [WHATSASENA] --' + 
+                                    '\n*WhatsAsena bir hata gerçekleşti!*'+
+                                    '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
+                                    '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
+                                    '\n_Bu mesaj sizin numaranıza (kaydedilen mesajlar) gitmiş olmalıdır._\n\n' +
+                                    'Gerçekleşen Hata: ' + error + '\n\n'
+                                    , MessageType.text);
+                            } else {
+                                await conn.sendMessage(conn.user.jid, '🧞‍♂️______```Nandhutty V2```_____🧞‍' +
+                                    '\n\n*🧞‍♂️ ' + error + '*\n'
+                                    , MessageType.text);
+                            }
+                        }
+                    }
+                }
+            }
+        )
+    });
+
+    try {
+        await conn.connect();
+    } catch {
+        if (!nodb) {
+            console.log(chalk.red.bold('Eski sürüm stringiniz yenileniyor...'))
+            conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
+            try {
+                await conn.connect();
+            } catch {
+                return;
+            }
+        }
+    }
+}
+
+whatsAsena();
