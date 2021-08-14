@@ -3,15 +3,15 @@
 
   <p align="center">
 
-<a href="#"><img title="Jimbrootan🧞‍♂️" src="https://img.shields.io/badge/Jimbrootan%F0%9F%A7%9E%E2%80%8D%E2%99%82%EF%B8%8F-blueviolet?&style=for-the-badge"></a>
+<a href="#"><img title="HASBOT" src=""></a>
 </p>
   <p align="center">
 <a href="https://github.com/Mikhaiel"><img title="Author" src="https://img.shields.io/badge/Author-Mikhaiel-Offical/Jimbrootan?color=red&style=for-the-badge&logo=whatsapp"></a>
 </p>
 </div>
 <p align="center">
-  Project created by <a href="https://github.com/Mikhaiel">Mikhaiel</a> to make it public
-    <br>
+  Project created by <a href="https://github.com/">HASBOT</a> to make it public
+    <br>Muhammedhashirm009/
        © Reserved 
     <br>
 </p>
