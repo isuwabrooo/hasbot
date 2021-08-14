@@ -1,15 +1,6 @@
-# hasbot
+# HASBOT 
+By Hashir
 
-
-## 📢 Guide
-Click WA logo for Support 👇
-    <br>
-<br>
-  [![join](https://github.com/Alien-alfa/PublicBot/blob/main/wlogo.svg.png)](https://chat.whatsapp.com/Buyz3sEdhaWB0Rp7gtsKjd)
-  <div align="center">
-
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=Mikhaiel&repo=Jinnh&theme=nightowl)](https://github.com/Mikhaiel/Jinnh)
-  </div>
 
 ## Setup
 <div align="center">
